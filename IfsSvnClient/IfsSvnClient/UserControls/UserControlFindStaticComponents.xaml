@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="IfsSvnClient.UserControls.UserControlFindStaticComponents"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="In Every component, deploy.ini in trunk is checked to constract this list." FontWeight="Bold" TextWrapping="Wrap" FontSize="16"/>
+            <Button x:Name="buttonShow" Grid.Column="1" Content="Show" Click="buttonShow_Click" Margin="3"/>
+            <Button x:Name="buttonUnion" Grid.Column="2" Content="Union Selected" Margin="3" Click="buttonUnion_Click" IsEnabled="False"/>           
+        </Grid>
+        <DataGrid x:Name="dataGridComponentTable" AutoGenerateColumns="False" Grid.Row="1" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Component" IsReadOnly="True" Binding="{Binding Key}"/>
+                <DataGridTextColumn Header="Static List" Binding="{Binding Value}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox Grid.Row="2" Name="textBoxunion" AllowDrop="False" TextWrapping="NoWrap" Height="40"/>
+        <ProgressBar Grid.Row="3" Height="20" Name="progressBarSearch" IsIndeterminate="False" />
+    </Grid>
+</UserControl>

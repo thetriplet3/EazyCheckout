@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71977CCB-DBC2-46F4-A780-50B23EB7A041}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IfsSvnClient</RootNamespace>
+    <AssemblyName>EazyCheckout</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\cmbrnd53\Apps\EazyCheckout\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>\\cmbrnd53\Apps\EazyCheckout\</UpdateUrl>
+    <SupportUrl>http://cmbrnd53/devtools/</SupportUrl>
+    <TargetCulture>en</TargetCulture>
+    <ProductName>EazyCheckout</ProductName>
+    <PublisherName>DevTools</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>EazyCheckout.html</WebPage>
+    <ApplicationRevision>80</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Graphicloads-100-Flat-Download.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1F4B32343BA32BB52DE99C8AF7FF5E05466D1ABA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>IfsSvnClient.App</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FirstFloor.ModernUI, Version=1.0.9.0, Culture=neutral, PublicKeyToken=bc9b0c37bf06c6a9, processorArchitecture=MSIL">
+      <HintPath>..\packages\ModernUI.WPF.1.0.9\lib\net45\FirstFloor.ModernUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Lync.Controls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lync.2010\Microsoft.Lync.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Lync.Controls.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lync.2010\Microsoft.Lync.Controls.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Lync.Model, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lync.2010\Microsoft.Lync.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Lync.Utilities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lync.2010\Microsoft.Lync.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Uc">
+      <HintPath>..\packages\Lync.2010\Microsoft.Office.Uc.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.5\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpSvn, Version=1.9004.3879.127, Culture=neutral, PublicKeyToken=d729672594885a28, processorArchitecture=AMD64">
+      <HintPath>..\packages\SharpSvn.1.9-x64.1.9004.3879.127\lib\net40\SharpSvn.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SharpSvn.UI, Version=1.9004.3879.127, Culture=neutral, PublicKeyToken=33789aa53ca44aa9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpSvn.1.9-x64.1.9004.3879.127\lib\net40\SharpSvn.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Classes\ButtonState.cs" />
+    <Compile Include="Classes\CheckOutArguments.cs" />
+    <Compile Include="Classes\IfsSvn.cs" />
+    <Compile Include="Classes\JobType.cs" />
+    <Compile Include="Classes\NotifierLync.cs" />
+    <Compile Include="Classes\SearchArguments.cs" />
+    <Compile Include="Classes\SearchResults.cs" />
+    <Compile Include="Classes\SvnComponent.cs" />
+    <Compile Include="Classes\SvnManagerArguments.cs" />
+    <Compile Include="Classes\SvnProject.cs" />
+    <Compile Include="Classes\TagArguments.cs" />
+    <Compile Include="UserControls\UserControlCheckOut.xaml.cs">
+      <DependentUpon>UserControlCheckOut.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlComponentManager.xaml.cs">
+      <DependentUpon>UserControlComponentManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlCreateBranchFromTag.xaml.cs">
+      <DependentUpon>UserControlCreateBranchFromTag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlCreateTagFromTrunk.xaml.cs">
+      <DependentUpon>UserControlCreateTagFromTrunk.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlFindStaticComponents.xaml.cs">
+      <DependentUpon>UserControlFindStaticComponents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlManageTagBranch.xaml.cs">
+      <DependentUpon>UserControlManageTagBranch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlSearchBranch.xaml.cs">
+      <DependentUpon>UserControlSearchBranch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlSettings.xaml.cs">
+      <DependentUpon>UserControlSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserControlStartPage.xaml.cs">
+      <DependentUpon>UserControlStartPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Assets\ModernUI.MyTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="UserControls\UserControlCheckOut.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlComponentManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlCreateBranchFromTag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlCreateTagFromTrunk.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlFindStaticComponents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlManageTagBranch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlSearchBranch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UserControlStartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Resource Include="Resources\search16.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="IfsSvnClient_TemporaryKey.pfx" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\opened_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dialogs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\checkout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\goto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\select_all_1616.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\select_row_1616.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\clear_1616.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\copy_1616.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Graphicloads-100-Flat-Download.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

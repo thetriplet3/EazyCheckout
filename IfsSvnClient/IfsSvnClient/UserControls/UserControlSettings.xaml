@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="IfsSvnClient.UserControls.UserControlSettings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="478" 
+             d:DesignWidth="719"             
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:p="clr-namespace:IfsSvnClient.Properties" 
+             xmlns:controls="clr-namespace:Microsoft.Lync.Controls;assembly=Microsoft.Lync.Controls" 
+             Loaded="UserControl_Loaded">
+    <Grid Style="{StaticResource ContentRoot}" Margin="0">
+        <Grid.Resources>
+            <controls:ConversationContextualInfo 
+                      x:Key="contextualInfo" 
+                      ApplicationId="{}{21224942-AC24-4D0D-B0C7-6107D79448DF}"
+                      Subject="EazyCheckout"/>
+        </Grid.Resources>
+
+        <Button Content="Reset Settings" Height="30" HorizontalAlignment="Left" Margin="12,0,0,12" Name="button1" VerticalAlignment="Bottom" Width="140" Click="button1_Click" />
+       
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="207,24,0,0" Name="textBoxPublishVersion" VerticalAlignment="Top" Width="232" IsReadOnly="True" />
+        <TextBlock Height="41" HorizontalAlignment="Left" Margin="12,12,0,0" Name="textBlock2" Text="EazyCheckout" VerticalAlignment="Top" FontWeight="Bold" FontSize="26" Width="189" Foreground="#FF873E8F">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="#FFC375CB" BlurRadius="5" Opacity="0.5" RenderingBias="Quality" ShadowDepth="3"></DropShadowEffect>
+            </TextBlock.Effect>
+        </TextBlock>
+        <Button Height="Auto" Margin="445,21,0,0" Name="buttonContactSupport" VerticalAlignment="Top" Click="buttonContactSupport_Click" HorizontalAlignment="Left" Width="Auto" Padding="3">
+            <Button.ContextMenu>
+                <ContextMenu >
+                    <MenuItem Name="menuItem_ChangeSupportPerson">
+                        <MenuItem.Header>
+                            <TextBox Text="{Binding Source={x:Static p:Settings.Default}, Path=SupportPerson, Mode=TwoWay}"/>
+                        </MenuItem.Header>
+                    </MenuItem>
+                </ContextMenu>
+            </Button.ContextMenu>
+            <Button.Content>
+                <StackPanel Orientation="Horizontal">
+                    <controls:PresenceIndicator 
+                        Name="presenceIndicatorSupportPerson" 
+                        Source="{Binding Source={x:Static p:Settings.Default}, Path=SupportPerson, Mode=OneWay}"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        SingleClickAction="None"
+                        ContextualInformation="{StaticResource contextualInfo}" 
+                        HoverAction="None" />
+                    <TextBlock Text="Contact Support" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="3"/>
+                </StackPanel>
+            </Button.Content>
+        </Button>
+        <GroupBox Header="User Experience" Height="100" HorizontalAlignment="Left" Margin="12,58,0,0" Name="groupBox1" VerticalAlignment="Top" Width="408" IsEnabled="True">
+            <Grid>
+                <Button Content="Backup Log" Height="30" HorizontalAlignment="Left" Margin="6,6,0,0" Name="button_BackUpLog" VerticalAlignment="Top" Width="104" Click="button_BackUpLog_Click" IsEnabled="True" />
+            </Grid>
+        </GroupBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="IfsSvnClient.UserControls.UserControlSearchBranch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="600"
+             xmlns:p="clr-namespace:IfsSvnClient.Properties">
+    <Grid Style="{StaticResource ContentRoot}" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label Content="Root Path:" Name="label1" Padding="3" Margin="3" />
+        <TextBox Grid.Column="1" Height="23" Name="textBoxPath" Text="{Binding Source={x:Static p:Settings.Default}, Path=ServerUri, Mode=TwoWay}" Margin="3"/>
+        <Label Content="Pattern:" Grid.Row="1" Name="label2" Padding="3" Margin="3" />
+        <TextBox Grid.Column="1" Grid.Row="1" Height="23" Name="textBoxPattern" Text="{Binding Source={x:Static p:Settings.Default}, Path=Pattern, Mode=TwoWay}" Margin="3"/>
+        <Button Content="Find" Grid.Column="1" Grid.Row="2" Height="30" HorizontalAlignment="Right" Name="buttonFind" Width="75" Margin="3" Click="buttonFind_Click" />
+        <TextBox Grid.Row="3" Grid.ColumnSpan="2" Name="textBoxLog" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="3" IsReadOnly="True" />
+        <ProgressBar Grid.Row="4" Grid.ColumnSpan="2" Height="20" Name="progressBarSearch" IsIndeterminate="False" />
+    </Grid>
+</UserControl>

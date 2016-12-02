@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="IfsSvnClient.UserControls.UserControlComponentManager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:p="clr-namespace:IfsSvnClient.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" 
+             d:DesignWidth="800">
+    <Grid Style="{StaticResource ContentRoot}" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="3" Name="textBlock1" Text="Type componet(s) names (comma seperated) and Press Create:" FontSize="18" />
+        <TextBox Grid.Row="1" Height="138" Margin="3" Name="textBoxCompornentNames" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" />
+        <Button Grid.Row="2" Content="Create Componet(s)" Margin="3" Name="buttonCreateComponets" Click="buttonCreateComponets_Click" HorizontalAlignment="Right" />
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.ColumnSpan="3" Margin="3" Name="textBlock2" Text="Type Project Name and Press Create:" FontSize="18"/>
+            <TextBox Grid.Row="1" Grid.ColumnSpan="2" Margin="3" Name="textBoxProjectName" />
+            <Button Grid.Row="1" Grid.Column="2" Content="Create Project" Margin="3" Name="buttonCreateProject" Click="buttonCreateProject_Click" />
+        </Grid>
+       
+        
+        <ProgressBar Grid.Row="5" Grid.ColumnSpan="5" Name="progressBarMain" IsIndeterminate="True" Visibility="Hidden" Height="Auto" Margin="3" IsTabStop="False" />        
+    </Grid>
+</UserControl>
