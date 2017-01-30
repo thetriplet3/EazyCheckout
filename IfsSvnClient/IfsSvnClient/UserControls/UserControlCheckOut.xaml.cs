@@ -83,7 +83,7 @@ namespace IfsSvnClient.UserControls
         {
             get
             {
-                string buttonText = ((buttonCheckOut.Content as StackPanel).Children[0] as Label).Content.ToString();
+                string buttonText = ((buttonCheckOut.Content as StackPanel).Children[1] as Label).Content.ToString();
                 if (buttonText == this.CHECKOUT_BUTTON_TEXT)
                 {
                     return ButtonState.CheckOut;
@@ -107,8 +107,8 @@ namespace IfsSvnClient.UserControls
                     buttonText = "Cancel";
                     source = this.cancelImage;
                 }
-                ((buttonCheckOut.Content as StackPanel).Children[1] as Image).Source = source;
-                ((buttonCheckOut.Content as StackPanel).Children[0] as Label).Content = buttonText;
+                ((buttonCheckOut.Content as StackPanel).Children[0] as Image).Source = source;
+                ((buttonCheckOut.Content as StackPanel).Children[1] as Label).Content = buttonText;
             }
         }
 
@@ -452,11 +452,6 @@ namespace IfsSvnClient.UserControls
             {
                 if (listBoxComponents.SelectedItems != null)
                 {
-                    if (checkBoxRememberSelected.IsChecked == false)
-                    {
-                        this._toBeCheckedoutDictionary.Clear();
-                    }
-
                     var componentList = listBoxComponents.SelectedItems.Cast<ListBoxItem>().Select(i => i.Tag as SvnComponent);
 
                     foreach (SvnComponent component in componentList)
@@ -690,17 +685,15 @@ namespace IfsSvnClient.UserControls
         {
             listBoxComponents.SelectedItem = null;
             listBoxComponents.SelectedItems.Clear();
-            if (this.checkBoxRememberSelected.IsChecked == true)
+
+            SvnComponent component;
+            foreach (ListBoxItem item in listBoxComponents.Items)
             {
-                SvnComponent component;
-                foreach (ListBoxItem item in listBoxComponents.Items)
+                component = item.Tag as SvnComponent;
+                item.IsSelected = this._toBeCheckedoutDictionary.ContainsKey(item.Name);
+                if (item.IsSelected)
                 {
-                    component = item.Tag as SvnComponent;
-                    item.IsSelected = this._toBeCheckedoutDictionary.ContainsKey(item.Name);
-                    if (item.IsSelected)
-                    {
-                        listBoxComponents.SelectedItems.Add(item);
-                    }
+                    listBoxComponents.SelectedItems.Add(item);
                 }
             }
 
@@ -742,7 +735,7 @@ namespace IfsSvnClient.UserControls
                         Mouse.OverrideCursor = Cursors.Wait;
                         backgroundWorkerCheckOut.RunWorkerAsync(new CheckOutArguments(JobType.CheckOut,
                                                                                       checkBoxShowMoreInfor.IsChecked.Value,
-                                                                                      checkBoxCleanUpWhenLocked.IsChecked.Value,
+                                                                                      true,
                                                                                       projectPath,
                                                                                       checkOutPathProject,
                                                                                       this._toBeCheckedoutDictionary.Values.ToArray()));

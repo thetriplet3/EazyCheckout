@@ -42,12 +42,11 @@
                     <ImageBrush ImageSource="/EazyCheckout;component/Resources/search16.png" Stretch="None" AlignmentX="Right" Opacity=".75" />
                 </TextBox.Background>
             </TextBox>
-            <ListBox Grid.Row="2" Name="listBoxProjectList" Margin="3" MinWidth="150" IsTextSearchEnabled="True" SelectionChanged="listBoxProjectList_SelectionChanged" BorderThickness="1" ClipToBounds="False" TextSearch.TextPath="Name" />
+            <ListBox Grid.Row="2" Name="listBoxProjectList" Margin="3,3,3,0" MinWidth="150" IsTextSearchEnabled="True" SelectionChanged="listBoxProjectList_SelectionChanged" BorderThickness="1" ClipToBounds="False" TextSearch.TextPath="Name" />
         </Grid>
         <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" Width="6" ShowsPreview="True" IsTabStop="False" />
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
@@ -68,8 +67,7 @@
                     <ImageBrush ImageSource="/EazyCheckout;component/Resources/search16.png" Stretch="None" AlignmentX="Right" Opacity="0.75" />
                 </TextBox.Background>
             </TextBox>
-            <CheckBox Grid.Row="2" Content="Remember My Selection" Margin="3" Name="checkBoxRememberSelected" VerticalAlignment="Center" IsChecked="False" IsTabStop="False" />
-            <Grid Grid.Row="3">
+            <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -106,7 +104,7 @@
                     </Button.Effect>
                 </Button>
             </Grid>
-            <ListBox Grid.Row="4" Name="listBoxComponents" Margin="3" MinWidth="150" SelectionMode="Multiple" IsTextSearchEnabled="True" TextSearch.TextPath="Name" SelectionChanged="listBoxComponents_SelectionChanged" BorderThickness="1" />
+            <ListBox Grid.Row="3" Name="listBoxComponents" Margin="3,3,3,0" MinWidth="150" SelectionMode="Multiple" IsTextSearchEnabled="True" TextSearch.TextPath="Name" SelectionChanged="listBoxComponents_SelectionChanged" BorderThickness="1" />
         </Grid>
         <GridSplitter Grid.Column="3" HorizontalAlignment="Stretch" Width="6" ShowsPreview="True" IsTabStop="False" />
         <Grid Grid.Column="4">
@@ -162,15 +160,14 @@
                 <Button Height="Auto" Name="buttonCheckOut" Width="100" Margin="3,3,3,3" Click="buttonCheckOut_Click" Padding="3" TabIndex="10" IsDefault="True">
                     <Button.Content>
                         <StackPanel Orientation="Horizontal">
-                            <Label Name="buttonLabel" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Checkout" Padding="3" />
                             <Image Name="buttonCheckOotImage" Source="/EazyCheckout;component/Resources/checkout.png" Stretch="UniformToFill" />
+                            <Label Name="buttonLabel" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Checkout" Padding="3" />
                         </StackPanel>
                     </Button.Content>
                     <Button.Effect>
                         <DropShadowEffect ShadowDepth="0" Opacity="0.5"></DropShadowEffect>
                     </Button.Effect>
                 </Button>
-                <CheckBox Grid.Column="1" Content="Clean Up When Checking-out" Margin="3" Name="checkBoxCleanUpWhenLocked" VerticalAlignment="Center" IsChecked="True" IsTabStop="False" />
                 <CheckBox Grid.Column="2" Content="Show Details" Margin="3" Name="checkBoxShowMoreInfor" VerticalAlignment="Center" IsChecked="False" IsTabStop="False" />
             </Grid>
             <Grid Grid.Row="4">

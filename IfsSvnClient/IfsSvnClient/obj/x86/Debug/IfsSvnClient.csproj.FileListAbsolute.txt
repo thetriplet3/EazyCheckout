@@ -5,11 +5,6 @@ D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\EazyCheckout.app
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\EazyCheckout.exe
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\EazyCheckout.pdb
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\FirstFloor.ModernUI.dll
-D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\Microsoft.Lync.Controls.dll
-D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\Microsoft.Lync.Controls.Framework.dll
-D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\Microsoft.Lync.Model.dll
-D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\Microsoft.Lync.Utilities.dll
-D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\Microsoft.Office.Uc.dll
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\NLog.dll
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\SharpSvn.dll
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Debug\SharpSvn.UI.dll

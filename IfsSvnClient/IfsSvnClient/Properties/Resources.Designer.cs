@@ -261,7 +261,7 @@ namespace IfsSvnClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to tharindu.thudugala@ifsworld.com.
+        ///   Looks up a localized string similar to peumali.sudasinghe@ifsworld.com.
         /// </summary>
         internal static string SupportPerson_Other {
             get {
@@ -279,7 +279,7 @@ namespace IfsSvnClient.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to prasanga.ranaweera@ifsworld.com.
+        ///   Looks up a localized string similar to peumali.sudasinghe@ifsworld.com.
         /// </summary>
         internal static string SupportPerson_ServiceAsset {
             get {
