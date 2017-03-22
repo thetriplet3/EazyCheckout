@@ -39,6 +39,7 @@ namespace IfsSvnClient.UserControls
         private SvnUriTarget projectsUri;
 
         private Dictionary<string, SvnComponent> _toBeCheckedoutDictionary;
+        private bool _isFiltering = false;
 
         public UserControlCheckOut()
         {
@@ -450,34 +451,47 @@ namespace IfsSvnClient.UserControls
         {
             try
             {
-                if (listBoxComponents.SelectedItems != null)
+                if (this._isFiltering == false)
                 {
-                    var componentList = listBoxComponents.SelectedItems.Cast<ListBoxItem>().Select(i => i.Tag as SvnComponent);
-
-                    foreach (SvnComponent component in componentList)
+                    if (e.AddedItems.Count > 0 || e.RemovedItems.Count > 0)
                     {
-                        if (this._toBeCheckedoutDictionary.ContainsKey(component.Name) == false)
+                        var addedComponentList = e.AddedItems.Cast<ListBoxItem>().Select(i => i.Tag as SvnComponent);
+
+                        foreach (SvnComponent component in addedComponentList)
                         {
-                            this._toBeCheckedoutDictionary.Add(component.Name, component);
+                            if (this._toBeCheckedoutDictionary.ContainsKey(component.Name) == false)
+                            {
+                                this._toBeCheckedoutDictionary.Add(component.Name, component);
+                            }
                         }
-                    }
 
-                    string selectedCompomentList;
-                    if (this._toBeCheckedoutDictionary.Count <= 15)
-                    {
-                        selectedCompomentList = string.Join(", ", this._toBeCheckedoutDictionary.Keys);
+                        var removedComponentList = e.RemovedItems.Cast<ListBoxItem>().Select(i => i.Tag as SvnComponent);
+
+                        foreach (SvnComponent component in removedComponentList)
+                        {
+                            if (this._toBeCheckedoutDictionary.ContainsKey(component.Name))
+                            {
+                                this._toBeCheckedoutDictionary.Remove(component.Name);
+                            }
+                        }
+
+                        string selectedCompomentList;
+                        if (this._toBeCheckedoutDictionary.Count <= 15)
+                        {
+                            selectedCompomentList = string.Join(", ", this._toBeCheckedoutDictionary.Keys);
+                        }
+                        else
+                        {
+                            selectedCompomentList = string.Format("{0} selected ", this._toBeCheckedoutDictionary.Count);
+                        }
+
+                        textBlockSelectedComponentList.Inlines.Clear();
+                        textBlockSelectedComponentList.Inlines.Add(new Italic(new Run(selectedCompomentList)) { Foreground = Brushes.Purple });
                     }
                     else
                     {
-                        selectedCompomentList = string.Format("{0} selected ", this._toBeCheckedoutDictionary.Count);
+                        this.ClearComponentSelection();
                     }
-
-                    textBlockSelectedComponentList.Inlines.Clear();
-                    textBlockSelectedComponentList.Inlines.Add(new Italic(new Run(selectedCompomentList)) { Foreground = Brushes.Purple });
-                }
-                else
-                {
-                    this.ClearComponentSelection();
                 }
             }
             catch (Exception)
@@ -681,7 +695,7 @@ namespace IfsSvnClient.UserControls
             return (listBoxComponents.SelectedItems.Count > 0);
         }
 
-        private bool SelectTobeCheckedOutComponents()
+        private void SelectTobeCheckedOutComponents()
         {
             listBoxComponents.SelectedItem = null;
             listBoxComponents.SelectedItems.Clear();
@@ -701,8 +715,6 @@ namespace IfsSvnClient.UserControls
             {
                 listBoxComponents.ScrollIntoView(listBoxComponents.SelectedItems[0]);
             }
-
-            return (listBoxComponents.SelectedItems.Count > 0);
         }
 
         private void StartCheckOut()
@@ -752,6 +764,8 @@ namespace IfsSvnClient.UserControls
         {
             try
             {
+                this._isFiltering = true;
+
                 listBoxComponents.Items.Filter = ListBoxComponentsFilter;
 
                 if (Properties.Settings.Default.TextBoxComponentFilter_text != textBoxComponentFilter.Text)
@@ -762,6 +776,8 @@ namespace IfsSvnClient.UserControls
                 Properties.Settings.Default.TextBoxComponentFilter_text = textBoxComponentFilter.Text;
 
                 this.SelectTobeCheckedOutComponents();
+
+                this._isFiltering = false;
             }
             catch (Exception)
             {

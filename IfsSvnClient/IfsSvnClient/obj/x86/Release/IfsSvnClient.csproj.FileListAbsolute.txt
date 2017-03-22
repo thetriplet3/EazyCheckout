@@ -15,10 +15,11 @@ D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Release\SharpSvn.dll
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Release\SharpSvn.UI.dll
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Release\FirstFloor.ModernUI.xml
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Release\NLog.xml
+D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Release\SharpSvn.pdb
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Release\SharpSvn.xml
+D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Release\SharpSvn.UI.pdb
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Release\SharpSvn.UI.xml
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Release\SharpPlink-x64.svnExe
-D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\obj\x86\Release\IfsSvnClient.csprojResolveAssemblyReference.cache
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\obj\x86\Release\Assets\ModernUI.MyTheme.baml
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\obj\x86\Release\MainWindow.baml
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\obj\x86\Release\UserControls\UserControlCreateBranchFromTag.baml
@@ -53,5 +54,3 @@ D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\obj\x86\Release\EazyChecko
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\obj\x86\Release\EazyCheckout.application
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\obj\x86\Release\EazyCheckout.exe
 D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\obj\x86\Release\EazyCheckout.pdb
-D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Release\SharpSvn.pdb
-D:\Rioux_Svn\easybill\trunk\IfsSvnClient\IfsSvnClient\bin\Release\SharpSvn.UI.pdb
