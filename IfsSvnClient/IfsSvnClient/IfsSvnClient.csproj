@@ -67,10 +67,10 @@
     <ApplicationIcon>Graphicloads-100-Flat-Download.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>38D3BBD18A4C7FB39A37841D98C736B4BB069D0D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>ECAAF85C7D2E2CE8E79F933744F2AE2F8F3977FE</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>IfsSvnClient_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>IfsSvnClient_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -86,43 +86,49 @@
       <HintPath>..\packages\ModernUI.WPF.1.0.9\lib\net45\FirstFloor.ModernUI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Lync.Controls, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Lync.2010\Microsoft.Lync.Controls.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Lync.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lync2013SDK.15.0.4466.1000\lib\net40\Microsoft.Lync.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Lync.Controls.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Lync.2010\Microsoft.Lync.Controls.Framework.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Lync.Controls.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lync2013SDK.15.0.4466.1000\lib\net40\Design\Microsoft.Lync.Controls.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Lync.Model, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Lync.2010\Microsoft.Lync.Model.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Lync.Controls.Framework, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lync2013SDK.15.0.4466.1000\lib\net40\Microsoft.Lync.Controls.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Lync.Utilities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Lync.2010\Microsoft.Lync.Utilities.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Lync.Controls.VisualStudio.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lync2013SDK.15.0.4466.1000\lib\net40\Design\Microsoft.Lync.Controls.VisualStudio.Design.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Office.Uc">
-      <HintPath>..\packages\Lync.2010\Microsoft.Office.Uc.dll</HintPath>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-      <Private>True</Private>
+    <Reference Include="Microsoft.Lync.Model, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lync2013SDK.15.0.4466.1000\lib\net40\Microsoft.Lync.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Lync.Utilities, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lync2013SDK.15.0.4466.1000\lib\net40\Microsoft.Lync.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Uc, Version=15.0.4603.1000, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lync2013SDK.15.0.4466.1000\lib\net40\Microsoft.Office.Uc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Design.Extensibility">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\PublicAssemblies\Microsoft.Windows.Design.Extensibility.dll</HintPath>
     </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.4.1\lib\net45\NLog.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\NLog.4.5.6\lib\net45\NLog.dll</HintPath>
     </Reference>
-    <Reference Include="SharpSvn, Version=1.9005.3934.158, Culture=neutral, PublicKeyToken=d729672594885a28, processorArchitecture=AMD64">
-      <HintPath>..\packages\SharpSvn.1.9-x64.1.9005.3934.158\lib\net40\SharpSvn.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="SharpSvn, Version=1.9007.3987.251, Culture=neutral, PublicKeyToken=d729672594885a28, processorArchitecture=AMD64">
+      <HintPath>..\packages\SharpSvn.1.9-x64.1.9007.3987.251\lib\net40\SharpSvn.dll</HintPath>
     </Reference>
-    <Reference Include="SharpSvn.UI, Version=1.9005.3934.158, Culture=neutral, PublicKeyToken=33789aa53ca44aa9, processorArchitecture=MSIL">
-      <HintPath>..\packages\SharpSvn.1.9-x64.1.9005.3934.158\lib\net40\SharpSvn.UI.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="SharpSvn.UI, Version=1.9007.3987.251, Culture=neutral, PublicKeyToken=33789aa53ca44aa9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpSvn.1.9-x64.1.9007.3987.251\lib\net40\SharpSvn.UI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -255,8 +261,9 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <Content Include="NLog.config">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="IfsSvnClient_1_TemporaryKey.pfx" />
     <None Include="IfsSvnClient_TemporaryKey.pfx" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
